@@ -1,0 +1,14 @@
+{
+  "name": "frontstart",
+  "description": "Minimalistic component based style library to kickstart front-end projects",
+  "version": "0.8.0",
+  "main": "_frontstart.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontstart/frontstart.git"
+  },
+  "homepage": "https://frontstart.dev",
+  "private": false,
+  "author": "Ben Besuijen",
+  "license": "MIT"
+}
