@@ -1,5 +1,5 @@
-# Color
-Source files: [base/color](https://github.com/frontstart/frontstart/blob/master/base/color)
+# Colors
+Source files: [base/colors](https://github.com/frontstart/frontstart/blob/master/base/colors)
 
 ---
 

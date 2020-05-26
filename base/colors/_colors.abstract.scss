@@ -1,0 +1,18 @@
+$black: #000 !default;
+$white: #fff !default;
+
+$blue: #008ad2 !default;
+$blue-lightest: mix($white, $blue, 50%) !default;
+$blue-lighter: mix($white, $blue, 30%) !default;
+$blue-light: mix($white, $blue, 10%) !default;
+$blue-dark: mix($black, $blue, 10%) !default;
+$blue-darker: mix($black, $blue, 30%) !default;
+$blue-darkest: mix($black, $blue, 60%) !default;
+
+$green: #00d259 !default;
+$green-lightest: mix($white, $green, 60%) !default;
+$green-lighter: mix($white, $green, 30%) !default;
+$green-light: mix($white, $green, 10%) !default;
+$green-dark: mix($black, $green, 10%) !default;
+$green-darker: mix($black, $green, 30%) !default;
+$green-darkest: mix($black, $green, 60%) !default;

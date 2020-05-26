@@ -1,0 +1,47 @@
+@import 'buttons.abstract';
+
+.button {
+  @include ellipsis;
+  @include radius;
+  @include reset-button($blue);
+  border: 2px solid $blue;
+  color: $white;
+  font-size: $button-font-size-md;
+  height: $button-height-md;
+  padding: 0 space(3);
+
+  &:not(.is-disabled):not([disabled]):hover {
+    background-color: $blue-dark;
+    border-color: $blue-dark;
+  }
+
+  &:focus {
+    border-color: $blue-darkest;
+  }
+
+  /**
+   * Color modifiers
+   **/  
+  &.is-secondary {
+    background-color: transparent; 
+  }  
+
+  /**
+   * Size modifiers
+   **/ 
+   &.is-sm {
+    height: $button-height-sm;
+    font-size: $button-font-size-sm;
+    padding: 0 space(2);
+  }
+
+  &.is-lg {
+    height: $button-height-lg;
+    font-size: $button-font-size-lg;
+    padding: 0 space(4);
+  }   
+}
+
+.frontstart button:not([class]) { 
+  @extend .button;
+}

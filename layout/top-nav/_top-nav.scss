@@ -1,0 +1,43 @@
+@import 'top-nav.abstract';
+
+.top-nav {
+  background-color: $green;
+  margin-bottom: space(6);
+  
+  &_container {
+    @include container;
+    align-items: center;
+    display: flex;
+    height: $top-nav-height;
+    justify-content: space-between;
+
+    @include breakpoint(xs, sm) {
+      height: 60px;
+    }     
+  }
+  
+  &_menu {
+    @include reset-ul;
+    display: flex;
+
+    &.is-secondary {
+      @include breakpoint(xs, sm) {
+        display: none;
+      }      
+    }
+  }
+
+  li {
+    margin-right: space(2);
+  }
+
+  &_link {
+    @include reset-a($white);
+    @include radius;
+    padding: space();
+
+    &:hover {
+      background-color: $green-lighter;
+    }
+  }
+}

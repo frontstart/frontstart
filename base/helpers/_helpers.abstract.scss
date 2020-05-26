@@ -1,0 +1,107 @@
+/**
+ * Style mixins
+ */
+@mixin border {
+  border: 1px solid color(border);
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid color(border);
+}
+
+@mixin border-left {
+  border-left: 1px solid color(border);
+}
+
+@mixin border-right {
+  border-right: 1px solid color(border);
+}
+
+@mixin border-top {
+  border-top: 1px solid color(border);
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin radius {
+  border-radius: 2px;
+}
+
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(color(shadow), 0.1);
+  }
+
+  @if $level == 2 {
+    box-shadow: 0 2px 2px rgba(color(shadow), 0.2);
+  }
+
+  @if $level == 3 {
+    box-shadow: 0 3px 5px rgba(color(shadow), 0.25);
+  }
+}
+
+@mixin trim-child-margin {
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin box {
+  @include radius;
+  @include shadow;
+  display: block;
+}
+
+/**
+ * Reset mixins
+ */
+@mixin reset-a($color: inherit) {
+  color: $color;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@mixin reset-button($background-color: transparent) {
+  align-items: center;
+  background-color: $background-color;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  justify-content: center;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+@mixin reset-dl {
+  margin: 0;
+
+  dd {
+    margin-left: 0;
+  }
+}
+
+@mixin reset-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+@mixin reset-ol {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
